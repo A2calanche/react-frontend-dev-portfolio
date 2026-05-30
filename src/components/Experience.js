@@ -13,6 +13,7 @@ class Experience extends Component {
       var work = this.props.resumeExperience.map(function (work, i) {
         const technologies = work.technologies;
         const mainTechnologies = work.mainTech;
+        const icons = work.icons || ["fab fa-python"];  // fallback
 
         var mainTech = mainTechnologies.map((technology, i) => {
           return (
@@ -28,6 +29,7 @@ class Experience extends Component {
             </Badge>
           );
         });
+
         return (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -36,14 +38,29 @@ class Experience extends Component {
               background: "#AE944F",
               color: "#fff",
               textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: "2px",
+              padding: "6px",
             }}
-            icon={<i className="fab fa-angular experience-icon"></i>}
+            icon={
+              <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "3px" }}>
+                {icons.map((iconClass, j) => (
+                  <i
+                    className={`${iconClass} experience-icon`}
+                    key={j}
+                    style={{ fontSize: icons.length > 1 ? "1.1rem" : "1.6rem" }}
+                  ></i>
+                ))}
+              </div>
+            }
             key={i}
           >
             <div style={{ textAlign: "left", marginBottom: "4px" }}>
               {mainTech}
             </div>
-
             <h3
               className="vertical-timeline-element-title"
               style={{ textAlign: "left" }}
