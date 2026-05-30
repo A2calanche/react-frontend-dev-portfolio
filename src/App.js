@@ -18,33 +18,27 @@ class App extends Component {
       sharedData: {},
     };
   }
-
-  applyPickedLanguage(pickedLanguage, pickedLangIconId) {
-    this.swapCurrentlyActiveLanguage(pickedLangIconId);
-    document.documentElement.lang = pickedLanguage;
-
-    const langToFile = {
-      [window.$primaryLanguage]:   `res_primaryLanguage.json`,
-      [window.$secondaryLanguage]: `res_secondaryLanguage.json`,
-      [window.$tertiaryLanguage]:  `res_tertiaryLanguage.json`,
-    };
-
-    const resumePath = langToFile[pickedLanguage] ?? `res_primaryLanguage.json`;
-    this.loadResumeFromPath(resumePath);
+    componentDidMount() {
+    this.loadSharedData();
+    this.applyPickedLanguage(
+      window.$primaryLanguage,
+      window.$primaryLanguageIconId
+    );
   }
-
-  swapCurrentlyActiveLanguage(pickedLangIconId) {
-    const allIconIds = [
-      window.$primaryLanguageIconId,
-      window.$secondaryLanguageIconId,
-      window.$tertiaryLanguageIconId,
-    ];
-
-    allIconIds.forEach(id => {
-      document.getElementById(id)?.classList.remove("active");
-    });
-    document.getElementById(pickedLangIconId)?.classList.add("active");
-  }
+  
+    swapCurrentlyActiveLanguage(pickedLangIconId) {
+      const allIconIds = [
+            window.$primaryLanguageIconId,
+            window.$secondaryLanguageIconId,
+            window.$tertiaryLanguageIconId,
+          ];
+          allIconIds.forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el) el.classList.remove("active");
+          });
+          var picked = document.getElementById(pickedLangIconId);
+          if (picked) picked.classList.add("active");
+        }
 
   loadResumeFromPath(path) {
     $.ajax({

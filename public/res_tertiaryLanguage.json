@@ -1,19 +1,19 @@
 {
   "basic_info": {
-    "description_header": "Hola",
-    "description": "¡Soy Arturo! Soy desarrollador de software y analista de datos. Esta página existe para mostrar mi portafolio. Si ves algo interesante, ¡hablemos!",
+    "description_header": "Olá",
+    "description": "Sou o Arturo! Sou desenvolvedor de software e analista de dados. Esta página existe para mostrar meu portfólio. Se você vir algo interessante, vamos conversar!",
     "section_name": {
-      "about": "Sobre mí",
-      "projects": "Proyectos",
+      "about": "Sobre mim",
+      "projects": "Projetos",
       "skills": "Habilidades",
-      "experience": "Experiencia"
+      "experience": "Experiência"
     }
   },
   "projects": [
     {
       "title": "Animal Shelter",
       "startDate": "2020",
-      "description": "La aplicación más compleja en la que tuve oportunidad de trabajar. Aprendí muchas tecnologías y mi código fue revisado por un excelente tutor. La aplicación gestiona todos los procesos de adopción y permite almacenar toda la documentación sobre la adopción de animales.",
+      "description": "A aplicação mais complexa em que tive oportunidade de trabalhar. Aprendi muitas tecnologias e meu código foi revisado por um ótimo tutor. A aplicação gerencia todos os processos de adoção e permite armazenar toda a documentação sobre a adoção de animais.",
       "images": [
         "images/portfolio/animal-shelter/p1.jpg",
         "images/portfolio/animal-shelter/p2.jpg"
@@ -28,7 +28,7 @@
     {
       "title": "Photography",
       "startDate": "2018",
-      "description": "Proyecto personal para una materia de estudio. Fui responsable de probar una aplicación de fotografía que optimiza imágenes con algoritmos populares usados por editores gráficos como Pixlr o Adobe Photoshop. ¡Saqué A!",
+      "description": "Projeto pessoal para uma disciplina acadêmica. Fui responsável por testar uma aplicação de fotografia que otimiza imagens com algoritmos populares usados por editores gráficos como Pixlr ou Adobe Photoshop. Tirei A!",
       "images": [
         "images/portfolio/photography/p1.jpg",
         "images/portfolio/photography/p2.jpg"
@@ -42,7 +42,7 @@
     {
       "title": "3D Object Viewer",
       "startDate": "2015",
-      "description": "Una de las primeras apps en las que trabajé durante mis prácticas. Tuve que desarrollar la implementación front-end para una app que muestra modelos 3D de edificios conocidos. También fue mi primer proyecto con Angular. ¡Aprendí muchísimo!",
+      "description": "Um dos primeiros apps em que trabalhei durante o meu estágio. Tive que desenvolver a implementação front-end para um app que exibe modelos 3D de edifícios famosos. Foi também o meu primeiro projeto com Angular. Aprendi muito!",
       "images": [
         "images/portfolio/adventure/p1.jpg",
         "images/portfolio/adventure/p2.jpg"
@@ -58,7 +58,7 @@
   "experience": [
     {
       "company": "DefOpenSource",
-      "title": "Desarrollador Front-End",
+      "title": "Desenvolvedor Front-End",
       "years": "10.2019 - presente",
       "mainTech": ["Angular 8/9/10"],
       "technologies": [
@@ -68,7 +68,7 @@
     },
     {
       "company": "Serros Solutions",
-      "title": "Pasante",
+      "title": "Estagiário",
       "years": "01.2018 - 09.2019",
       "mainTech": ["Angular 7/8"],
       "technologies": ["RxJS", "Django", "PHP", "JavaScript", "DHTMLX Gantt"]
