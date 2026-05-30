@@ -20,9 +20,8 @@
       ],
       "url": "",
       "technologies": [
-        { "class": "devicon-angularjs-plain", "name": "Angular" },
-        { "class": "devicon-typescript-plain", "name": "TypeScript" },
-        { "class": "devicon-csharp-plain", "name": "C#" }
+        { "class": "devicon-react-original", "name": "React" },
+        { "class": "devicon-javascript-plain", "name": "JavaScript" }
       ]
     },
     {
@@ -49,29 +48,41 @@
       ],
       "url": "https://github.com",
       "technologies": [
-        { "class": "devicon-angularjs-plain", "name": "Angular" },
-        { "class": "devicon-typescript-plain", "name": "TypeScript" },
-        { "class": "devicon-csharp-plain", "name": "C#" }
+        { "class": "devicon-python-plain", "name": "Python" },
+        { "class": "devicon-javascript-plain", "name": "JavaScript" }
       ]
     }
   ],
-  "experience": [
+   "experience": [
     {
-      "company": "DefOpenSource",
-      "title": "Desenvolvedor Front-End",
-      "years": "10.2019 - presente",
-      "mainTech": ["Angular 8/9/10"],
+      "company": "Bemol SA",
+      "title": "Analista de Dados",
+      "years": "2023 - 2026",
+      "icons": ["fab fa-python", "fas fa-database"],
+      "mainTech": ["Python", "Databricks"],
       "technologies": [
-        "REST API", "RxJS", "JavaScript", "Bootstrap",
-        "MDBootstrap", "EF Core", ".NET Core", "SignalR", "Angular Material"
+        "Python",
+        "PySpark",
+        "Spark SQL",
+        "Delta Lake",
+        "n8n",
+        "REST API",
+        "Go",
+        "JavaScript"
       ]
     },
     {
-      "company": "Serros Solutions",
-      "title": "Estagiário",
-      "years": "01.2018 - 09.2019",
-      "mainTech": ["Angular 7/8"],
-      "technologies": ["RxJS", "Django", "PHP", "JavaScript", "DHTMLX Gantt"]
+      "company": "CoreCode.io",
+      "title": "Estudante — MERN Stack",
+      "years": "2023",
+      "icons": ["fab fa-react", "fab fa-node-js", "fas fa-database"],
+      "mainTech": ["React", "Node.js"],
+      "technologies": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js"
+      ]
     }
   ]
 }

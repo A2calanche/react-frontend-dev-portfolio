@@ -1,63 +1,68 @@
 {
-    "basic_info": {
-      "name": "Arturo Calanche",
-      "titles": [ "Software Developer", "Data Analyst Pleno", "Back-end Developer"],
-      "social": [
-        {
-          "name": "github",
-          "url": "https://github.com",
-          "class": "fab fa-github"
-        },
-        {
-          "name": "instagram",
-          "url": "https://www.instagram.com",
-          "class": "fab fa-instagram"
-        }
-      ],
-      "image": "myProfile.jpg"
-    },
-    "skills": {
-      "icons": [
-        {
-          "name": "HTML 5",
-          "class": "devicon-html5-plain",
-          "level": "95"
-        },
-        {
-          "name": "CSS 3",
-          "class": "devicon-css3-plain",
-          "level": "95"
-        },
-        {
-          "name": "Python",
-          "class": "devicon-angularjs-plain",
-          "level": "80"
-        },
-        {
-          "name": "TypeScript",
-          "class": "devicon-typescript-plain",
-          "level": "90"
-        },
-        {
-          "name": "JavaScript",
-          "class": "devicon-javascript-plain",
-          "level": "70"
-        },
-        {
-          "name": "Golang",
-          "class": "devicon-sass-original",
-          "level": "75"
-        },
-        {
-          "name": "MySql",
-          "class": "devicon-mysql-plain",
-          "level": "60"
-        },
-        {
-          "name": "SQLite",
-          "class": "devicon-sqlite-plain",
-          "level": "60"
-        }
-      ]
-    }
+  "basic_info": {
+    "name": "Arturo Calanche",
+    "titles": ["Software Developer", "Data Analyst Pleno", "Back-end Developer"],
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/TuUsuario",
+        "class": "fab fa-github"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/TuUsuario",
+        "class": "fab fa-instagram"
+      }
+    ],
+    "image": "myProfile.jpg"
+  },
+  "skills": {
+    "icons": [
+      {
+        "name": "Python",
+        "class": "devicon-python-plain",
+        "level": "80"
+      },
+      {
+        "name": "JavaScript",
+        "class": "devicon-javascript-plain",
+        "level": "70"
+      },
+      {
+        "name": "Golang",
+        "class": "devicon-go-plain",
+        "level": "75"
+      },
+      {
+        "name": "MySQL",
+        "class": "devicon-mysql-plain",
+        "level": "60"
+      },
+      {
+        "name": "SQLite",
+        "class": "devicon-sqlite-plain",
+        "level": "60"
+      },
+      {
+        "name": "React",
+        "class": "devicon-react-original",
+        "level": "50"
+      },
+      {
+        "name": "Node.js",
+        "class": "devicon-nodejs-plain",
+        "level": "50"
+      },
+      {
+        "name": "HTML 5",
+        "class": "devicon-html5-plain",
+        "level": "65"
+      },
+      {
+        "name": "CSS 3",
+        "class": "devicon-css3-plain",
+        "level": "65"
+      }
+    ]
   }
+}
