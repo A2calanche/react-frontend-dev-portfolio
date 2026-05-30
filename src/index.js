@@ -8,9 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 /* GLOBAL VARIABLES */
 
 window.$primaryLanguage = 'en';
-window.$secondaryLanguage = 'pl';
+window.$secondaryLanguage = 'es';
+window.$thirdLanguage = 'pt';
 window.$primaryLanguageIconId = 'primary-lang-icon';
 window.$secondaryLanguageIconId = 'secondary-lang-icon';
+window.$thirdLanguageIconId = 'third-lang-icon';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.register();
