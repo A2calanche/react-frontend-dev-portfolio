@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
 import pythonIcon from "@iconify/icons-logos/python";
-import goIcon from "@iconify/icons-logos/go";
+import sqliteIcon from "@iconify/icons-logos/sqlite";
 import javascriptIcon from "@iconify/icons-logos/javascript";
 
 class About extends Component {
@@ -30,17 +30,9 @@ class About extends Component {
                     src={profilepic}
                     alt="Avatar placeholder"
                   />
-                  <Icon
-                    icon={pythonIcon} 
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }} />
-                  
-                  <Icon
-                    icon={goIcon} 
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }} />
-                  
-                  <Icon
-                    icon={javascriptIcon} 
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }} />
+                  <Icon icon={pythonIcon} style={{ fontSize: "400%", margin: "9% 5% 0 5%" }} />
+                  <Icon icon={sqliteIcon} style={{ fontSize: "400%", margin: "9% 5% 0 5%" }} />
+                  <Icon icon={javascriptIcon} style={{ fontSize: "400%", margin: "9% 5% 0 5%" }} />
                 </span>
               </div>
             </div>
@@ -49,23 +41,26 @@ class About extends Component {
               <div className="col-md-10">
                 <div className="card">
                   <div className="card-header">
-                    <span
-                      className="iconify"
-                      data-icon="emojione:red-circle"
-                      data-inline="false"
-                    ></span>{" "}
-                    &nbsp;{" "}
-                    <span
-                      className="iconify"
-                      data-icon="twemoji:yellow-circle"
-                      data-inline="false"
-                    ></span>{" "}
-                    &nbsp;{" "}
-                    <span
-                      className="iconify"
-                      data-icon="twemoji:green-circle"
-                      data-inline="false"
-                    ></span>
+                    <span style={{
+                      display: "inline-block",
+                      width: "13px", height: "13px",
+                      borderRadius: "50%",
+                      background: "#ff5f57"
+                    }}></span>
+                    &nbsp;&nbsp;
+                    <span style={{
+                      display: "inline-block",
+                      width: "13px", height: "13px",
+                      borderRadius: "50%",
+                      background: "#febc2e"
+                    }}></span>
+                    &nbsp;&nbsp;
+                    <span style={{
+                      display: "inline-block",
+                      width: "13px", height: "13px",
+                      borderRadius: "50%",
+                      background: "#28c840"
+                    }}></span>
                   </div>
                   <div
                     className="card-body font-trebuchet text-justify ml-3 mr-3"

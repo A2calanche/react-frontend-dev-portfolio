@@ -1329,6 +1329,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/icons-twemoji@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-twemoji/-/icons-twemoji-1.2.8.tgz#2fd10d2b88f0cacff10b6a46087f46e2ff640059"
+  integrity sha512-i1MiOeVyt5FJ9aHzsMnR+7+A9at54bUujA6Dc0e583YEpcz2VWBBtHNchBs+vRpuglH7xphPX3udnvyn0+W80A==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/react@^1.1.3":
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.4.tgz#c778eddbaf196e55705d0bedff00d039dc1de8d3"

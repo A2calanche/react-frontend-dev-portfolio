@@ -7,6 +7,10 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import { Icon } from "@iconify/react";
+import ukFlag from "@iconify/icons-twemoji/flag-united-kingdom";
+import esFlag from "@iconify/icons-twemoji/flag-spain";
+import brFlag from "@iconify/icons-twemoji/flag-brazil";
 
 class App extends Component {
 
@@ -17,28 +21,47 @@ class App extends Component {
       resumeData: {},
       sharedData: {},
     };
+    this.applyPickedLanguage = this.applyPickedLanguage.bind(this);
+    this.swapCurrentlyActiveLanguage = this.swapCurrentlyActiveLanguage.bind(this);
   }
-    componentDidMount() {
+
+  componentDidMount() {
     this.loadSharedData();
     this.applyPickedLanguage(
       window.$primaryLanguage,
       window.$primaryLanguageIconId
     );
   }
-  
-    swapCurrentlyActiveLanguage(pickedLangIconId) {
-      const allIconIds = [
-            window.$primaryLanguageIconId,
-            window.$secondaryLanguageIconId,
-            window.$tertiaryLanguageIconId,
-          ];
-          allIconIds.forEach(function(id) {
-            var el = document.getElementById(id);
-            if (el) el.classList.remove("active");
-          });
-          var picked = document.getElementById(pickedLangIconId);
-          if (picked) picked.classList.add("active");
-        }
+
+  applyPickedLanguage(pickedLanguage, pickedLangIconId) {
+    this.swapCurrentlyActiveLanguage(pickedLangIconId);
+    document.documentElement.lang = pickedLanguage;
+
+    const langToFile = {
+      [window.$primaryLanguage]:  `res_primaryLanguage.json`,
+      [window.$secondaryLanguage]: `res_secondaryLanguage.json`,
+      [window.$tertiaryLanguage]:  `res_tertiaryLanguage.json`,
+    };
+
+    const resumePath = langToFile[pickedLanguage] || `res_primaryLanguage.json`;
+    this.loadResumeFromPath(resumePath);
+  }
+
+  swapCurrentlyActiveLanguage(pickedLangIconId) {
+    const allIconIds = [
+      window.$primaryLanguageIconId,
+      window.$secondaryLanguageIconId,
+      window.$tertiaryLanguageIconId,
+    ];
+
+    allIconIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.remove("active");
+    });
+
+    var picked = document.getElementById(pickedLangIconId);
+    if (picked) picked.classList.add("active");
+  }
 
   loadResumeFromPath(path) {
     $.ajax({
@@ -78,32 +101,25 @@ class App extends Component {
           <div
             onClick={() => this.applyPickedLanguage(
               window.$primaryLanguage,
-              window.$primaryLanguageIconId   //
+              window.$primaryLanguageIconId
             )}
             style={{ display: "inline" }}
           >
-            <span
-              className="iconify language-icon mr-5"
-              data-icon="twemoji-flag-for-flag-united-kingdom"
-              data-inline="false"
-              id={window.$primaryLanguageIconId}
-            ></span>
+            <Icon icon={ukFlag} className="language-icon mr-5" 
+            id={window.$primaryLanguageIconId} style={{fontSize: "2rem"}} />
           </div>
 
           <div
             onClick={() => this.applyPickedLanguage(
               window.$secondaryLanguage,
-              window.$secondaryLanguageIconId  // 
+              window.$secondaryLanguageIconId
             )}
             style={{ display: "inline" }}
           >
-            <span
-              className="iconify language-icon mr-5"
-              data-icon="twemoji-flag-for-flag-poland"
-              data-inline="false"
-              id={window.$secondaryLanguageIconId}
-            ></span>
+            <Icon icon={esFlag} className="language-icon mr-5" 
+            id={window.$secondaryLanguageIconId} style={{fontSize: "2rem"}} />
           </div>
+
           <div
             onClick={() => this.applyPickedLanguage(
               window.$tertiaryLanguage,
@@ -111,12 +127,8 @@ class App extends Component {
             )}
             style={{ display: "inline" }}
           >
-            <span
-              className="iconify language-icon"
-              data-icon="twemoji-flag-for-flag-brazil"  // 
-              data-inline="false"
-              id={window.$tertiaryLanguageIconId}
-            ></span>
+            <Icon icon={brFlag} className="language-icon" 
+            id={window.$tertiaryLanguageIconId} style={{fontSize: "2rem"}} />
           </div>
 
         </div>
