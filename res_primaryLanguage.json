@@ -27,9 +27,9 @@
     {
       "title": "Data Autoupdate",
       "startDate": "2024",
-      "description": "Automated fraud prevention analytics system built with Power Automate and Power BI. Processed sales data to detect anomalies and generate daily and monthly reports on total losses and losses prevented, delivered to directors and the finance department. Due to data confidentiality, a similar version with public datasets is planned for GitHub.",
+      "description": "Automated fraud prevention analytics system built with Power Automate and Power BI. Processed sales data to detect anomalies and generate daily and monthly reports on total losses and losses prevented, delivered to directors and the finance department. — Demo and repository coming soon.",
       "images": [
-        "images/portfolio/photography/p1.jpg",
+        "images/portfolio/Automatization/fullstack.gif;",
         "images/portfolio/photography/p2.jpg"
       ],
       "url": "https://github.com",
