@@ -1,62 +1,66 @@
 {
   "basic_info": {
-    "description_header": "Olá",
-    "description": "Sou o Arturo! Sou desenvolvedor de software e analista de dados. Esta página existe para mostrar meu portfólio. Se você vir algo interessante, vamos conversar!",
+    "description_header": "Hi",
+    "description": "Olá, sou o Arturo! Sou desenvolvedor de software e analista de dados, e esta página foi criada para mostrar meu portfólio! Se você encontrar algo interessante, vamos conversar!",
     "section_name": {
       "about": "Sobre mim",
       "projects": "Projetos",
-      "skills": "Habilidades",
+      "skills":"Habilidades",
       "experience": "Experiência"
     }
   },
   "projects": [
     {
-      "title": "Animal Shelter",
-      "startDate": "2020",
-      "description": "A aplicação mais complexa em que tive oportunidade de trabalhar. Aprendi muitas tecnologias e meu código foi revisado por um ótimo tutor. A aplicação gerencia todos os processos de adoção e permite armazenar toda a documentação sobre a adoção de animais.",
+      "title": "infinity gautlet",
+      "startDate": "2023",
+      "description": "Aplicativo web full-stack desenvolvido com a pilha MERN. Os recursos incluem autenticação de usuários (login, cadastro e Google OAuth), integração com canais do Slack por meio de registro baseado em eventos e uma lista de tarefas no estilo Kanban com operações CRUD completas e acompanhamento de status (Pendente → Em andamento → Concluído). Desenvolvido com uma arquitetura de API RESTful que abrange tanto o front-end quanto o back-end.",
       "images": [
-        "images/portfolio/animal-shelter/p1.jpg",
-        "images/portfolio/animal-shelter/p2.jpg"
+        "images/portfolio/infinity_gauntlet/p1.png",
+        "images/portfolio/infinity_gauntlet/Mern.gif"
       ],
-      "url": "",
+      "url": "github.com/a2calanche",
       "technologies": [
+        { "class": "devicon-javascript-plain", "name": "JavaScript" },
         { "class": "devicon-react-original", "name": "React" },
-        { "class": "devicon-javascript-plain", "name": "JavaScript" }
+        { "class": "devicon-express-original", "name": "Express" },
+        { "class": "devicon-mongodb-plain-wordmark", "name": "Mongo" },
+        { "class": "devicon-nodejs-plain-wordmark", "name": "NODE.js" }                
       ]
     },
     {
-      "title": "Photography",
-      "startDate": "2018",
-      "description": "Projeto pessoal para uma disciplina acadêmica. Fui responsável por testar uma aplicação de fotografia que otimiza imagens com algoritmos populares usados por editores gráficos como Pixlr ou Adobe Photoshop. Tirei A!",
+      "title": "Sistema de Analisis de fraudes",
+      "startDate": "2025",
+      "description": "Sistema automatizado de análise para prevenção de fraudes desenvolvido com o Power Automate e o Power BI. Processou dados de vendas para detectar anomalias e gerar relatórios diários e mensais sobre o total de perdas e as perdas evitadas, que foram enviados aos diretores e ao departamento financeiro. — Demonstração e repositório em breve.",
       "images": [
-        "images/portfolio/photography/p1.jpg",
-        "images/portfolio/photography/p2.jpg"
+        "images/portfolio/Automatization/fullstack.gif;",
+        "images/portfolio/Automatization/interactions.gif"
       ],
       "url": "https://github.com",
       "technologies": [
-        { "class": "devicon-react-original", "name": "React" },
-        { "class": "devicon-javascript-plain", "name": "JavaScript" }
+        { "class": "devicon-python-plain-wordmark", "name": "Python" },
+        { "class": "devicon-typescript-plain", "name": "TypeScript" }
       ]
     },
     {
-      "title": "3D Object Viewer",
-      "startDate": "2015",
-      "description": "Um dos primeiros apps em que trabalhei durante o meu estágio. Tive que desenvolver a implementação front-end para um app que exibe modelos 3D de edifícios famosos. Foi também o meu primeiro projeto com Angular. Aprendi muito!",
+      "title": "Alerta de Fraude em tempo real",
+      "startDate": "2026",
+      "description": "Fluxo de trabalho para detecção de padrões de fraude em tempo real desenvolvido no Databricks, alimentado com dados transacionais em tempo real do SAP. Fluxos de dados processados e analisados para identificar padrões anômalos, acionando alertas automáticos por e-mail em tempo real para uma resposta imediata das equipes financeira e de operações.",
       "images": [
-        "images/portfolio/adventure/p1.jpg",
-        "images/portfolio/adventure/p2.jpg"
+        "images/portfolio/fraud/fraud_prevention.jpeg;",
+        "images/portfolio/fraud/databricks_logo.gif"
       ],
       "url": "https://github.com",
       "technologies": [
-        { "class": "devicon-python-plain", "name": "Python" },
-        { "class": "devicon-javascript-plain", "name": "JavaScript" }
+        { "class": "devicon-mysql-original", "name": "MySQL" },
+        { "class": "devicon-python-plain-wordmark", "name": "Python" },
+        { "class": "devicon-azuresqldatabase-plain", "name" :"Azure-SQL"}
       ]
     }
   ],
-   "experience": [
+  "experience": [
     {
       "company": "Bemol SA",
-      "title": "Analista de Dados",
+      "title": "Data Analyst",
       "years": "2023 - 2026",
       "icons": ["fab fa-python", "fas fa-database"],
       "mainTech": ["Python", "Databricks"],
@@ -72,8 +76,8 @@
       ]
     },
     {
-      "company": "CoreCode.io",
-      "title": "Estudante — MERN Stack",
+      "company": "CoreCode.io ",
+      "title": "Student — MERN Stack",
       "years": "2023",
       "icons": ["fab fa-react", "fab fa-node-js", "fas fa-database"],
       "mainTech": ["React", "Node.js"],
@@ -81,7 +85,9 @@
         "MongoDB",
         "Express",
         "React",
-        "Node.js"
+        "Node.js",
+        "MySQL",
+        "JavaScript"
       ]
     }
   ]

@@ -16,40 +16,44 @@
       "description": "Full-stack web application built with the MERN stack. Features include user authentication (login, sign up, and Google OAuth), Slack channel integration via event-based registration, and a Kanban-style to-do list with full CRUD operations and status tracking (Pending → In Progress → Done). Built with a RESTful API architecture covering both frontend and backend.",
       "images": [
         "images/portfolio/infinity_gauntlet/p1.png",
-        "images/portfolio/infinity_gauntlet/p2.jpg"
+        "images/portfolio/infinity_gauntlet/Mern.gif"
       ],
       "url": "github.com/a2calanche",
       "technologies": [
+        { "class": "devicon-javascript-plain", "name": "JavaScript" },
         { "class": "devicon-react-original", "name": "React" },
-        { "class": "devicon-javascript-plain", "name": "JavaScript" }
+        { "class": "devicon-express-original", "name": "Express" },
+        { "class": "devicon-mongodb-plain-wordmark", "name": "Mongo" },
+        { "class": "devicon-nodejs-plain-wordmark", "name": "NODE.js" }                
       ]
     },
     {
       "title": "Data Autoupdate",
-      "startDate": "2024",
+      "startDate": "2025",
       "description": "Automated fraud prevention analytics system built with Power Automate and Power BI. Processed sales data to detect anomalies and generate daily and monthly reports on total losses and losses prevented, delivered to directors and the finance department. — Demo and repository coming soon.",
       "images": [
         "images/portfolio/Automatization/fullstack.gif;",
-        "images/portfolio/photography/p2.jpg"
+        "images/portfolio/Automatization/interactions.gif"
       ],
       "url": "https://github.com",
       "technologies": [
-        { "class": "devicon-react-original", "name": "React" },
-        { "class": "devicon-javascript-plain", "name": "JavaScript" }
+        { "class": "devicon-python-plain-wordmark", "name": "Python" },
+        { "class": "devicon-typescript-plain", "name": "TypeScript" }
       ]
     },
     {
-      "title": "3D Object Viewer",
-      "startDate": "2015",
-      "description": "One of the first apps I worked on during my internship. I developed the front-end implementation for an app that displays 3D models of known buildings. I've learned a lot!",
+      "title": "Real time Fraud Alert",
+      "startDate": "2026",
+      "description": "Real-time fraud pattern detection pipeline built on Databricks, fed with live transactional data from SAP. Processed and analyzed data streams to identify anomalous patterns, triggering automated email alerts in real time for immediate response by the finance and operations teams.",
       "images": [
-        "images/portfolio/adventure/p1.jpg",
-        "images/portfolio/adventure/p2.jpg"
+        "images/portfolio/fraud/fraud_prevention.jpeg;",
+        "images/portfolio/fraud/databricks_logo.gif"
       ],
       "url": "https://github.com",
       "technologies": [
-        { "class": "devicon-python-plain", "name": "Python" },
-        { "class": "devicon-javascript-plain", "name": "JavaScript" }
+        { "class": "devicon-mysql-original", "name": "MySQL" },
+        { "class": "devicon-python-plain-wordmark", "name": "Python" },
+        { "class": "devicon-azuresqldatabase-plain", "name" :"Azure-SQL"}
       ]
     }
   ],
