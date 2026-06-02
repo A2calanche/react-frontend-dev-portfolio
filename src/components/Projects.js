@@ -29,10 +29,16 @@ class Projects extends Component {
               <div className="foto" onClick={() => detailsModalShow(projects)}>
                 <div>
                   <img
-                    src={projects.images[0]}
-                    alt="projectImages"
-                    height="230"
-                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
+                  src={projects.images[0]}
+                  alt="projectImages"
+                  style={{ marginBottom: 0,
+                           paddingBottom: 0,
+                           position: 'relative',
+                           width: '100%',
+                           height: '230px',
+                           objectFit: 'cover',
+                           objectPosition: 'center'
+                          }}
                   />
                   <span className="project-date">{projects.startDate}</span>
                   <br />
