@@ -4,6 +4,7 @@ import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
+
 class ProjectDetailsModal extends Component {
   render() {
     if (this.props.data) {
@@ -12,6 +13,7 @@ class ProjectDetailsModal extends Component {
       var title = this.props.data.title;
       var description = this.props.data.description;
       var url = this.props.data.url;
+
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
@@ -28,13 +30,28 @@ class ProjectDetailsModal extends Component {
             </li>
           );
         });
+
         if (this.props.data.images) {
           var img = images.map((elem, i) => {
-            return <div key={i} data-src={elem} />;
+            return (
+              <div key={i}>
+                <img
+                  src={elem}
+                  alt={"slide-" + i}
+                  style={{
+                    width: "100%",
+                    height: "400px",
+                    objectFit: "contain",
+                    background: "#000"
+                  }}
+                />
+              </div>
+            );
           });
         }
       }
     }
+
     return (
       <Modal
         {...this.props}
@@ -49,24 +66,27 @@ class ProjectDetailsModal extends Component {
         <div className="col-md-12">
           <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
             <div className="slider-tab">
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="emojione:red-circle"
-                data-inline="false"
-                style={{ marginLeft: "5px" }}
-              ></span>{" "}
-              &nbsp;{" "}
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="twemoji:yellow-circle"
-                data-inline="false"
-              ></span>{" "}
-              &nbsp;{" "}
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="twemoji:green-circle"
-                data-inline="false"
-              ></span>
+              <span style={{
+                display: "inline-block",
+                width: "13px", height: "13px",
+                borderRadius: "50%",
+                background: "#ff5f57",
+                marginLeft: "5px"
+              }}></span>
+              &nbsp;&nbsp;
+              <span style={{
+                display: "inline-block",
+                width: "13px", height: "13px",
+                borderRadius: "50%",
+                background: "#febc2e"
+              }}></span>
+              &nbsp;&nbsp;
+              <span style={{
+                display: "inline-block",
+                width: "13px", height: "13px",
+                borderRadius: "50%",
+                background: "#28c840"
+              }}></span>
             </div>
             <AwesomeSlider
               cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
@@ -79,8 +99,8 @@ class ProjectDetailsModal extends Component {
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
-              {url ? (
-                <a
+              {url ? (<a
+                
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"

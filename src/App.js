@@ -8,9 +8,10 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { Icon } from "@iconify/react";
-import ukFlag from "@iconify/icons-twemoji/flag-united-kingdom";
-import esFlag from "@iconify/icons-twemoji/flag-spain";
+import usFlag from "@iconify/icons-twemoji/flag-united-states";
+import mxFlag from "@iconify/icons-twemoji/flag-mexico";
 import brFlag from "@iconify/icons-twemoji/flag-brazil";
+import Chat from "./components/Chat";
 
 class App extends Component {
 
@@ -105,7 +106,7 @@ class App extends Component {
             )}
             style={{ display: "inline" }}
           >
-            <Icon icon={ukFlag} className="language-icon mr-5" 
+            <Icon icon={usFlag} className="language-icon mr-5" 
             id={window.$primaryLanguageIconId} style={{fontSize: "2rem"}} />
           </div>
 
@@ -116,7 +117,7 @@ class App extends Component {
             )}
             style={{ display: "inline" }}
           >
-            <Icon icon={esFlag} className="language-icon mr-5" 
+            <Icon icon={mxFlag} className="language-icon mr-5" 
             id={window.$secondaryLanguageIconId} style={{fontSize: "2rem"}} />
           </div>
 
@@ -149,6 +150,7 @@ class App extends Component {
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
+        <Chat />
       </div>
     );
   }
