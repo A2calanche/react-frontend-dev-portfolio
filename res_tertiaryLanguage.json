@@ -9,6 +9,28 @@
       "experience": "Experiência"
     }
   },
+  "chat": {
+  "welcome": "Olá! Sou o assistente do Arturo. Como posso te ajudar? 👋",
+  "back": "← Voltar às perguntas",
+  "faq": [
+    {
+      "question": "Quais serviços você oferece?",
+      "answer": "Meus serviços incluem: automação de processos rotineiros com implementação opcional de IA, treinamentos em uso de IA e automação, e criação de agentes de IA."
+    },
+    {
+      "question": "Quanto custa?",
+      "answer": "O preço depende do escopo e complexidade de cada projeto. Entre em contato e encontramos a melhor solução para o seu orçamento!"
+    },
+    {
+      "question": "Como posso te contatar?",
+      "answer": "Você pode me contatar por Email ou WhatsApp. Confira os links no rodapé!"
+    },
+    {
+      "question": "Com quais tecnologias você trabalha?",
+      "answer": "Trabalho com Python, JavaScript, SQLite, Databricks, n8n, MAKE, OpenClaw/NemoClaw (agentes de IA locais em sandbox isolado via OpenShell), e criação de agentes de IA com outros LLMs."
+    }
+  ]
+},
   "projects": [
     {
       "title": "infinity gautlet",

@@ -9,6 +9,28 @@
       "experience": "Experience"
     }
   },
+  "chat": {
+  "welcome": "Hi! I'm Arturo's assistant. How can I help you today? 👋",
+  "back": "← Back to questions",
+  "faq": [
+    {
+      "question": "What services do you offer?",
+      "answer": "My services include: routine process automation with optional AI integration, training in AI usage and automation, and AI agent development."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Pricing depends on the scope and complexity of each project. Contact me and we'll find the best solution for your budget!"
+    },
+    {
+      "question": "How can I contact you?",
+      "answer": "You can reach me via Email or WhatsApp. Check the links in the footer!"
+    },
+    {
+      "question": "What technologies do you work with?",
+      "answer": "I work with Python, JavaScript, SQLite, Databricks, n8n, MAKE, OpenClaw/NemoClaw (local AI agents in isolated sandbox via OpenShell), and AI agent development with other LLMs."
+    }
+  ]
+},
   "projects": [
     {
       "title": "infinity gautlet",
