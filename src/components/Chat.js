@@ -5,59 +5,58 @@ class Chat extends Component {
     super(props);
     this.state = {
       isOpen: false,
-      messages: [
-        {
-          from: "bot",
-          text: "Hi! I'm Arturo's assistant. How can I help you today? 👋",
-        },
-      ],
-      inputValue: "",
+      messages: [],
+      showFAQ: true,
     };
-    this.messagesEndRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.initChat();
+  }
+
+  componentDidUpdate(prevProps) {
+    // si cambia el idioma, reinicia el chat
+    if (prevProps.chatData !== this.props.chatData) {
+      this.initChat();
+    }
+    if (this.messagesEndRef) {
+      this.messagesEndRef.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  initChat() {
+    const chatData = this.props.chatData || {};
+    const welcome = chatData.welcome || "Hi! I'm your assistant. How can I help you?";
+    this.setState({
+      messages: [{ from: "bot", text: welcome }],
+      showFAQ: true,
+    });
   }
 
   toggleChat() {
     this.setState((prev) => ({ isOpen: !prev.isOpen }));
   }
 
-  handleInput(e) {
-    this.setState({ inputValue: e.target.value });
-  }
-
-  handleKeyDown(e) {
-    if (e.key === "Enter") this.sendMessage();
-  }
-
-  sendMessage() {
-    const text = this.state.inputValue.trim();
-    if (!text) return;
-
+  handleFAQ(faq) {
     this.setState((prev) => ({
-      messages: [...prev.messages, { from: "user", text }],
-      inputValue: "",
+      messages: [
+        ...prev.messages,
+        { from: "user", text: faq.question },
+        { from: "bot", text: faq.answer },
+      ],
+      showFAQ: false,
     }));
-
-    setTimeout(() => {
-      this.setState((prev) => ({
-        messages: [
-          ...prev.messages,
-          {
-            from: "bot",
-            text: "Thanks for your message! I'll connect you with Arturo shortly.",
-          },
-        ],
-      }));
-    }, 800);
   }
 
-  componentDidUpdate() {
-    if (this.messagesEndRef.current) {
-      this.messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+  resetChat() {
+    this.initChat();
   }
 
   render() {
-    const { isOpen, messages, inputValue } = this.state;
+    const { isOpen, messages, showFAQ } = this.state;
+    const chatData = this.props.chatData || {};
+    const faqs = chatData.faq || [];
+    const backLabel = chatData.back || "← Back";
 
     return (
       <div style={{ position: "fixed", bottom: "30px", left: "30px", zIndex: 9999 }}>
@@ -65,7 +64,7 @@ class Chat extends Component {
         {isOpen && (
           <div style={{
             width: "320px",
-            height: "420px",
+            height: "450px",
             background: "#fff",
             borderRadius: "16px",
             boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
@@ -75,7 +74,6 @@ class Chat extends Component {
             overflow: "hidden",
           }}>
 
-            {/* HEADER */}
             <div style={{
               background: "#AE944F",
               padding: "14px 18px",
@@ -90,16 +88,22 @@ class Chat extends Component {
                   background: "#fff",
                   display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: "18px"
-                }}> <span role="img" aria-label="robot">🤖</span>
+                }}>
+                  <span role="img" aria-label="robot">🤖</span>
                 </div>
                 <div>
-                  <div style={{ color: "#fff", fontWeight: "bold", fontSize: "14px" }}>Arturo's Assistant</div>
-                  <div style={{ color: "rgba(255,255,255,0.8)", fontSize: "11px" }}>● Online</div>
+                  <div style={{ color: "#fff", fontWeight: "bold", fontSize: "14px" }}>
+                    Arturo's Assistant
+                  </div>
+                  <div style={{ color: "rgba(255,255,255,0.8)", fontSize: "11px" }}>
+                    ● Online
+                  </div>
                 </div>
               </div>
               <span
                 onClick={() => this.toggleChat()}
                 style={{ color: "#fff", cursor: "pointer", fontSize: "18px" }}
+                aria-label="close"
               >✕</span>
             </div>
 
@@ -120,7 +124,9 @@ class Chat extends Component {
                   <div style={{
                     maxWidth: "75%",
                     padding: "10px 14px",
-                    borderRadius: msg.from === "user" ? "16px 16px 4px 16px" : "16px 16px 16px 4px",
+                    borderRadius: msg.from === "user"
+                      ? "16px 16px 4px 16px"
+                      : "16px 16px 16px 4px",
                     background: msg.from === "user" ? "#AE944F" : "#fff",
                     color: msg.from === "user" ? "#fff" : "#333",
                     fontSize: "13px",
@@ -130,47 +136,51 @@ class Chat extends Component {
                   </div>
                 </div>
               ))}
-              <div ref={this.messagesEndRef} />
-            </div>
 
-            <div style={{
-              padding: "10px 12px",
-              borderTop: "1px solid #eee",
-              display: "flex",
-              gap: "8px",
-              background: "#fff",
-            }}>
-              <input
-                type="text"
-                value={inputValue}
-                onChange={(e) => this.handleInput(e)}
-                onKeyDown={(e) => this.handleKeyDown(e)}
-                placeholder="Type a message..."
-                style={{
-                  flex: 1,
-                  border: "1px solid #ddd",
-                  borderRadius: "20px",
-                  padding: "8px 14px",
-                  fontSize: "13px",
-                  outline: "none",
-                }}
-              />
-              <button
-                onClick={() => this.sendMessage()}
-                style={{
-                  background: "#AE944F",
-                  border: "none",
-                  borderRadius: "50%",
-                  width: "36px",
-                  height: "36px",
-                  cursor: "pointer",
-                  color: "#fff",
-                  fontSize: "16px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >➤</button>
+              {showFAQ && faqs.length > 0 && (
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "4px" }}>
+                  {faqs.map((faq, i) => (
+                    <button
+                      key={i}
+                      onClick={() => this.handleFAQ(faq)}
+                      style={{
+                        background: "#fff",
+                        border: "1px solid #AE944F",
+                        borderRadius: "12px",
+                        padding: "8px 12px",
+                        fontSize: "12px",
+                        color: "#AE944F",
+                        cursor: "pointer",
+                        textAlign: "left",
+                        fontWeight: "500",
+                      }}
+                    >
+                      {faq.question}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {!showFAQ && (
+                <button
+                  onClick={() => this.resetChat()}
+                  style={{
+                    background: "transparent",
+                    border: "1px solid #ccc",
+                    borderRadius: "12px",
+                    padding: "6px 12px",
+                    fontSize: "12px",
+                    color: "#888",
+                    cursor: "pointer",
+                    marginTop: "4px",
+                    alignSelf: "center",
+                  }}
+                >
+                  {backLabel}
+                </button>
+              )}
+
+              <div ref={(el) => { this.messagesEndRef = el; }} />
             </div>
           </div>
         )}
@@ -192,7 +202,10 @@ class Chat extends Component {
             justifyContent: "center",
           }}
         >
-          {isOpen ? <span aria-label="close"> ✕ </span> : <span role="img" aria-label="chat">💬</span>}
+          {isOpen
+            ? <span aria-label="close">✕</span>
+            : <span role="img" aria-label="chat">💬</span>
+          }
         </button>
       </div>
     );
