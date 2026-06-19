@@ -40,7 +40,7 @@
         "images/portfolio/infinity_gauntlet/p1.png",
         "images/portfolio/infinity_gauntlet/Mern.gif"
       ],
-      "url": "github.com/a2calanche",
+      "url": "https://github.com/A2calanche/infinity-gauntlet-project-main",
       "technologies": [
         { "class": "devicon-javascript-plain", "name": "JavaScript" },
         { "class": "devicon-react-original", "name": "React" },
@@ -54,10 +54,10 @@
       "startDate": "2025",
       "description": "Sistema automatizado de análise para prevenção de fraudes desenvolvido com o Power Automate e o Power BI. Processou dados de vendas para detectar anomalias e gerar relatórios diários e mensais sobre o total de perdas e as perdas evitadas, que foram enviados aos diretores e ao departamento financeiro. — Demonstração e repositório em breve.",
       "images": [
-        "images/portfolio/Automatization/fullstack.gif;",
+        "images/portfolio/Automatization/fullstack.gif",
         "images/portfolio/Automatization/interactions.gif"
       ],
-      "url": "https://github.com",
+      "url": "https://github.com/A2calanche/",
       "technologies": [
         { "class": "devicon-python-plain-wordmark", "name": "Python" },
         { "class": "devicon-typescript-plain", "name": "TypeScript" }
@@ -68,10 +68,10 @@
       "startDate": "2026",
       "description": "Fluxo de trabalho para detecção de padrões de fraude em tempo real desenvolvido no Databricks, alimentado com dados transacionais em tempo real do SAP. Fluxos de dados processados e analisados para identificar padrões anômalos, acionando alertas automáticos por e-mail em tempo real para uma resposta imediata das equipes financeira e de operações.",
       "images": [
-        "images/portfolio/fraud/fraud_prevention.jpeg;",
+        "images/portfolio/fraud/fraud_prevention.jpeg",
         "images/portfolio/fraud/databricks_logo.gif"
       ],
-      "url": "https://github.com",
+      "url": "https://github.com/A2calanche/Fraud-Detection-Case-Study-Repository-Structure",
       "technologies": [
         { "class": "devicon-mysql-original", "name": "MySQL" },
         { "class": "devicon-python-plain-wordmark", "name": "Python" },

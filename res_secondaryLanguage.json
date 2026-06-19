@@ -40,7 +40,7 @@
         "images/portfolio/infinity_gauntlet/p1.png",
         "images/portfolio/infinity_gauntlet/Mern.gif"
       ],
-      "url": "github.com/a2calanche",
+      "url": "https://github.com/A2calanche/infinity-gauntlet-project-main",
       "technologies": [
         { "class": "devicon-javascript-plain", "name": "JavaScript" },
         { "class": "devicon-react-original", "name": "React" },
@@ -54,10 +54,10 @@
       "startDate": "2025",
       "description": "Sistema automatizado de análisis para la prevención del fraude creado con Power Automate y Power BI. Procesó datos de ventas para detectar anomalías y generar informes diarios y mensuales sobre las pérdidas totales y las pérdidas evitadas, que se enviaron a los directores y al departamento financiero. — Próximamente habrá una demostración y un repositorio.",
       "images": [
-        "images/portfolio/Automatization/fullstack.gif;",
+        "images/portfolio/Automatization/fullstack.gif",
         "images/portfolio/Automatization/interactions.gif"
       ],
-      "url": "https://github.com",
+      "url": "https://github.com/",
       "technologies": [
         { "class": "devicon-react-original", "name": "React" },
         { "class": "devicon-javascript-plain", "name": "JavaScript" }
@@ -68,10 +68,10 @@
       "startDate": "2026",
       "description": "Proceso de detección de patrones de fraude en tiempo real basado en Databricks, alimentado con datos transaccionales en tiempo real procedentes de SAP. Los flujos de datos procesados y analizados permiten identificar patrones anómalos, lo que activa alertas automáticas por correo electrónico en tiempo real para que los equipos de finanzas y operaciones puedan responder de inmediato.",
       "images": [
-        "images/portfolio/fraud/fraud_prevention.jpeg;",
+        "images/portfolio/fraud/fraud_prevention.jpeg",
         "images/portfolio/fraud/databricks_logo.gif"
       ],
-       "url": "https://github.com",
+       "url": "https://github.com/A2calanche/Fraud-Detection-Case-Study-Repository-Structure",
       "technologies": [
         { "class": "devicon-mysql-original", "name": "MySQL" },
         { "class": "devicon-python-plain-wordmark", "name": "Python" },

@@ -40,7 +40,7 @@
         "images/portfolio/infinity_gauntlet/p1.png",
         "images/portfolio/infinity_gauntlet/Mern.gif"
       ],
-      "url": "github.com/a2calanche",
+      "url": "https://github.com/A2calanche/infinity-gauntlet-project-main",
       "technologies": [
         { "class": "devicon-javascript-plain", "name": "JavaScript" },
         { "class": "devicon-react-original", "name": "React" },
@@ -54,7 +54,7 @@
       "startDate": "2025",
       "description": "Automated fraud prevention analytics system built with Power Automate and Power BI. Processed sales data to detect anomalies and generate daily and monthly reports on total losses and losses prevented, delivered to directors and the finance department. — Demo and repository coming soon.",
       "images": [
-        "images/portfolio/Automatization/fullstack.gif;",
+        "images/portfolio/Automatization/fullstack.gif",
         "images/portfolio/Automatization/interactions.gif"
       ],
       "url": "https://github.com",
@@ -68,10 +68,10 @@
       "startDate": "2026",
       "description": "Real-time fraud pattern detection pipeline built on Databricks, fed with live transactional data from SAP. Processed and analyzed data streams to identify anomalous patterns, triggering automated email alerts in real time for immediate response by the finance and operations teams.",
       "images": [
-        "images/portfolio/fraud/fraud_prevention.jpeg;",
+        "images/portfolio/fraud/fraud_prevention.jpeg",
         "images/portfolio/fraud/databricks_logo.gif"
       ],
-      "url": "https://github.com",
+      "url": "https://github.com/A2calanche/Fraud-Detection-Case-Study-Repository-Structure",
       "technologies": [
         { "class": "devicon-mysql-original", "name": "MySQL" },
         { "class": "devicon-python-plain-wordmark", "name": "Python" },
